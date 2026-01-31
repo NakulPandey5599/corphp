@@ -22,3 +22,19 @@ for ($i = strlen($str) - 1; $i >= 0; $i--) {
 
 echo $rev; // weivretni
 ?>
+
+$arr = [10, 45, 2, 99, 34];
+
+$largest = $arr[0];
+$secondLargest = -INF;
+
+foreach ($arr as $value) {
+    if ($value > $largest) {
+        $secondLargest = $largest;
+        $largest = $value;
+    } elseif ($value > $secondLargest && $value != $largest) {
+        $secondLargest = $value;
+    }
+}
+
+echo $secondLargest;
