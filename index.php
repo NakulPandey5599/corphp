@@ -15,3 +15,13 @@ foreach ($arr as $value) {
 }
 
 print_r($result);
+
+$arr = [1, 2, 3, 5];
+$n = 5;
+
+$expectedSum = ($n * ($n + 1)) / 2;
+$actualSum = array_sum($arr);
+
+$missingNumber = $expectedSum - $actualSum;
+
+echo $missingNumber;
